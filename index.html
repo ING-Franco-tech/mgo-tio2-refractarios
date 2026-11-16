@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refractarios de MgO dopados con TiO₂ · Materiales refractarios UIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B3A63;--navy2:#1D5486;--navy-l:#EAF0F6;--green:#2B7336;--green-l:#E8F3EA;--ink:#17222D;--ink2:#4B5866;--mut:#76838F;--line:#DDE4EB;--panel:#F5F8FB;--red:#B83A2A;--red-l:#FBEAE7;--amber:#A86B12;--amber-l:#FBF1DF;--slab:'Roboto Slab',Georgia,serif;--sans:Inter,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#E9EEF3;color:var(--ink);font-family:var(--sans)}
+button{font:inherit;cursor:pointer}a{color:inherit}
+#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;transform:translate(-50%,-50%) scale(var(--scale,1));overflow:hidden;background:#fff}
+.slide{position:absolute;inset:0;display:none;overflow:hidden}.slide.active{display:block}
+.content{position:absolute;left:90px;right:90px;top:132px;bottom:104px}
+header{position:absolute;top:26px;left:90px;right:90px;display:flex;align-items:center;gap:20px;z-index:4;pointer-events:none}
+header img{height:54px}header .sep{width:1px;height:42px;background:var(--line)}
+#part{font:600 15px var(--sans);color:var(--mut);letter-spacing:.3px}
+#speaker{margin-left:auto;font:600 16px var(--sans);color:var(--speaker);display:flex;align-items:center;gap:9px}
+#speaker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--speaker)}
+.topline{position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--navy) 0 70%,var(--green) 70% 88%,#B9C1C9 88%);z-index:3}
+footer{position:absolute;left:90px;right:90px;bottom:26px;z-index:4;pointer-events:none}
+#source{font-size:13px;color:var(--mut);margin-bottom:12px;max-width:1250px}
+#progress{display:flex;gap:4px;width:1250px}#progress i{flex:1;height:4px;border-radius:2px;background:#E3E8EE}#progress i.past{background:#A9B8C7}#progress i.current{background:var(--green)}
+#counter{position:absolute;right:0;bottom:-5px;font:600 18px var(--slab);color:var(--navy)}
+.tag{display:inline-block;font:700 13px var(--sans);letter-spacing:1.6px;text-transform:uppercase;color:var(--green);background:var(--green-l);padding:8px 15px;border-radius:30px;margin-bottom:14px}
+.h1{font:700 64px/1.1 var(--slab);color:var(--navy);margin:0 0 22px;letter-spacing:-.5px}
+.h2{font:700 44px/1.12 var(--slab);color:var(--navy);margin:0 0 24px;letter-spacing:-.3px}
+.hl{color:var(--green)}
+.lead{font-size:23px;line-height:1.5;color:var(--ink2);margin:0}
+.small{font-size:15px;line-height:1.5;color:var(--mut)}
+.num{font-family:var(--slab);font-weight:700;color:var(--navy);letter-spacing:-.5px}
+b,strong{font-weight:600;color:var(--ink)}
+sub{font-size:.7em;line-height:0}
+.two{display:grid;gap:50px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 6px 18px rgba(11,58,99,.06)}
+.panel{background:var(--panel);border-radius:14px;padding:22px 26px}
+.pill{display:inline-block;font-size:16.5px;padding:9px 15px;border-radius:30px;background:var(--navy-l);color:var(--navy);font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.fig{margin:0}.fig .im{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
+.fig img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.fig figcaption{margin-top:9px;font-size:14px;color:var(--mut);display:block}
+.fig figcaption::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--green);margin-right:8px;vertical-align:middle}
+.grouplbl{font:700 13px var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);margin:0 0 10px}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:42px 1fr;gap:15px;align-items:start}
+.badge{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font:700 19px/42px var(--slab);text-align:center}
+.step h4{margin:2px 0 4px;font:700 22px var(--slab);color:var(--navy)}
+.step p{margin:0;font-size:19px;line-height:1.45;color:var(--ink2)}
+.eq{font:500 21px/1.5 var(--sans);color:var(--ink);background:var(--panel);border-left:4px solid var(--navy);padding:10px 16px;border-radius:0 10px 10px 0;margin:0 0 10px}
+.eq small{display:block;font-size:14px;color:var(--mut)}
+.kpi .num{font-size:52px;line-height:1}.kpi .num small{font-size:24px;color:var(--ink2)}.kpi p{margin:8px 0 0;font-size:17px;line-height:1.4;color:var(--ink2)}
+.note{display:inline-block;font-size:16px;color:var(--amber);background:var(--amber-l);padding:9px 15px;border-radius:10px}
+table.t{width:100%;border-collapse:collapse;font-size:18px}
+table.t th{font:700 12.5px var(--sans);letter-spacing:1.3px;text-transform:uppercase;color:var(--mut);text-align:left;padding:0 12px 10px}
+table.t td{padding:11px 12px;border-top:1px solid var(--line);color:var(--ink2)}table.t td:first-child{color:var(--navy);font-weight:600}
+svg text{font-family:var(--sans)}
+.ch{fill:none;stroke:none}.ch text{fill:var(--ink2);font-size:15px}.ch .lab{fill:var(--ink);font-size:17px}.ch .val{fill:var(--navy);font-weight:700;font-size:17px;font-family:var(--slab)}
+.ch .ax{stroke:#C9D2DB;stroke-width:1}.ch .ref{stroke:var(--red);stroke-width:1.6;stroke-dasharray:6 5}
+[data-f]{opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s}[data-f].shown{opacity:1;transform:none}
+.static *{animation:none!important;transition:none!important}.static [data-f]{opacity:1;transform:none}
+.sec{background:var(--navy)}
+.sec .content{display:flex;flex-direction:column;justify-content:center}
+.sec .nbig{font:700 150px/1 var(--slab);color:rgba(255,255,255,.18)}
+.sec h2{font:700 66px/1.1 var(--slab);color:#fff;margin:6px 0 18px}
+.sec p{font-size:24px;color:#C9D7E5;margin:0;max-width:1000px;line-height:1.5}
+.sec .who{margin-top:30px;font:600 20px var(--sans);color:#9FD3A8}
+.phase{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.phase .card{padding:18px 18px}.phase h3{margin:0 0 4px;font:700 26px var(--slab);color:var(--navy)}.phase .w{font-size:14px;color:var(--mut);margin-bottom:12px}
+.chip{display:block;font-size:16px;padding:7px 11px;border-radius:8px;margin-bottom:7px;background:var(--navy-l);color:var(--navy)}
+.chip.bad{background:var(--red-l);color:var(--red)}.chip.good{background:var(--green-l);color:var(--green)}.chip.gray{background:#EEF0F2;color:#5B6670}
+#start{position:absolute;inset:0;z-index:15;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+#start img{height:80px;margin-bottom:26px}
+#start .h1{font-size:52px;max-width:1200px}
+#start button{background:var(--navy);color:#fff;border:0;padding:16px 26px;margin:10px;border-radius:10px;font-weight:600;font-size:19px}
+#start button+button{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+#start[hidden]{display:none}
+#notes{position:absolute;bottom:66px;left:40px;right:40px;max-height:300px;background:#0F2236F2;color:#EEF3F8;border-radius:14px;z-index:10;padding:20px 28px;overflow:auto;box-shadow:0 -10px 40px #0004}
+#notes[hidden]{display:none}
+#notesHead{display:flex;align-items:center;justify-content:space-between;font-size:20px;font-weight:600}
+#noteSpeaker{color:#9FD3A8}#noteTime{color:#B9C6D3}
+#noteText{font-size:22px;line-height:1.5;margin:12px 0}#nextSpeaker{color:#B9C6D3;font-size:17px}
+#clock{font:600 26px var(--slab);color:#fff}
+#notesButton{position:absolute;bottom:72px;right:30px;z-index:12;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:15px;color:var(--navy);opacity:0;pointer-events:none;transition:opacity .2s}
+.mouse #notesButton,#notesButton:focus-visible{opacity:1;pointer-events:auto}
+#rotate{display:none;position:fixed;inset:0;z-index:30;background:#fff;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:22px;color:var(--navy)}
+@media(orientation:portrait) and (max-width:900px){#rotate{display:flex}}
+.sec.active~header #part,.sec.active~header #speaker{color:#fff}
+
+/* parte 6: más presencia */
+section[aria-label="Mecanismo"] .step h4{font-size:26px}section[aria-label="Mecanismo"] .step p{font-size:21px}
+section[aria-label="Mecanismo"] .steps{gap:34px!important}
+section[aria-label="Mecanismo"] svg.ch{height:320px!important}
+section[aria-label="Mecanismo"] .card p{font-size:20px!important}
+section[aria-label="Comparación con otros dopantes"] table.t{font-size:21px!important}
+section[aria-label="Comparación con otros dopantes"] table.t td{padding:18px 14px}
+section[aria-label="Conclusiones"] .kpi{min-height:210px}
+section[aria-label="Conclusiones"] .kpi p{font-size:19px}
+section[aria-label="Conclusiones"] .panel p{font-size:25px!important}
+section[aria-label="Lectura crítica"] .card{min-height:200px;padding:28px 30px}
+section[aria-label="Lectura crítica"] .card h4{font-size:26px!important;margin-bottom:10px!important}
+section[aria-label="Lectura crítica"] .card p{font-size:21px!important;line-height:1.45}
+section[aria-label="Caracterización"] table.t td{padding:14px 12px}
+</style>
+</head>
+<body>
+<main id="stage" aria-label="Presentación MgO dopado con TiO2">
+
+<!-- 1 PORTADA -->
+<section class="slide" data-part="Portada" data-speaker="Georman Quintero" data-src="Song Q., Zha X., Shi J., Gao M., Ma Y. Journal of Materials Research and Technology 35 (2025) 402–415. doi:10.1016/j.jmrt.2025.01.039" aria-label="Portada">
+<div class="content"><div class="two" style="grid-template-columns:1fr 520px;gap:60px">
+<div style="padding-top:30px"><span class="tag">Materiales refractarios · Seminario de artículo</span>
+<h1 class="h1">Refractarios de MgO dopados con TiO<sub>2</sub> <span class="hl">para fundir superaleaciones de níquel de alta pureza</span></h1>
+<p class="lead">Song et al., <i style="font-style:normal">Journal of Materials Research and Technology</i>, 2025</p></div>
+<div class="card" style="margin-top:40px"><div class="grouplbl">Integrantes</div>
+<div class="steps" style="gap:10px;font-size:19px;color:var(--ink)"><div>José Gabriel Franco Correa</div><div>Deivis Orlando Jiménez Torrado</div><div>Georman Stiwen Quintero González</div><div>Fabián Yesid Rivera Solano</div><div>Kevin Andrés Ruedas Duarte</div><div>Juan Sebastián Pereira Rojas</div></div></div>
+</div></div></section>
+
+<!-- PARTE 1 -->
+<section class="slide sec" data-part="Parte 1" data-speaker="Georman Quintero" data-src="Song et al. (2025) · 1. Introducción" aria-label="Parte 1">
+<div class="content"><div class="nbig">01</div><h2>Introducción y motivación</h2><p>Por qué el crisol importa tanto como la aleación que se funde en él.</p><div class="who">Georman Quintero</div></div></section>
+
+<section class="slide" data-part="Parte 1 · Introducción" data-speaker="Georman Quintero" data-src="Song et al. (2025) · Introducción · Imagen: material del grupo" aria-label="Superaleaciones">
+<div class="content"><div class="two" style="grid-template-columns:1fr 640px;gap:60px">
+<div><span class="tag">El contexto</span><h2 class="h2">Superaleaciones de níquel: <span class="hl">la pureza manda</span></h2>
+<div class="steps" style="margin-top:6px">
+<div class="step"><div class="badge">1</div><div><h4>Dónde se usan</h4><p>Aeroespacial, energía nuclear e ingeniería avanzada: deben conservar sus propiedades a alta temperatura.</p></div></div>
+<div class="step"><div class="badge">2</div><div><h4>Qué las daña</h4><p>Impurezas traza no metálicas e inclusiones de óxido en el lingote maestro.</p></div></div>
+<div class="step"><div class="badge" style="background:var(--green)">3</div><div><h4>Cómo se funden</h4><p>Por fusión por inducción al vacío (VIM). El crisol debe resistir choque térmico y corrosión para no contaminar la colada.</p></div></div></div></div>
+<figure class="fig" style="margin-top:20px"><div class="im" style="height:470px"><img src="fig/c_alabe.jpg" alt="Álabe de turbina de superaleación"></div><figcaption>Álabe de turbina: aplicación típica de superaleaciones base níquel</figcaption></figure>
+</div></div></section>
+
+<section class="slide" data-part="Parte 1 · Introducción" data-speaker="Georman Quintero" data-src="Song et al. (2025) · Introducción · Imágenes: material del grupo" aria-label="Limitaciones del MgO">
+<div class="content"><span class="tag">El material del crisol</span><h2 class="h2">MgO: funde a 2800 °C, <span class="hl">pero tiene tres problemas</span></h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+<div class="card" data-f="1"><div class="fig"><div class="im" style="height:260px;border:0"><img src="fig/c_poros.jpg" alt="Porosidad"></div></div><h4 style="font:700 24px var(--slab);color:var(--navy);margin:14px 0 6px">Sinterización difícil</h4><p class="small" style="font-size:17px;margin:0">Cuesta formar una matriz densa: quedan poros abiertos.</p></div>
+<div class="card" data-f="2"><div class="fig"><div class="im" style="height:260px;border:0"><img src="fig/c_choque.jpg" alt="Choque térmico"></div></div><h4 style="font:700 24px var(--slab);color:var(--navy);margin:14px 0 6px">Choque térmico</h4><p class="small" style="font-size:17px;margin:0">Baja resistencia: el crisol falla de forma prematura.</p></div>
+<div class="card" data-f="3"><div class="fig"><div class="im" style="height:260px;border:0"><img src="fig/c_corros.jpg" alt="Corrosión"></div></div><h4 style="font:700 24px var(--slab);color:var(--navy);margin:14px 0 6px">Corrosión química</h4><p class="small" style="font-size:17px;margin:0">Reacciona con elementos activos del baño y aporta trazas dañinas a la aleación.</p></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 1 · Introducción" data-speaker="Georman Quintero" data-src="Song et al. (2025) · Introducción · Imágenes: material del grupo" aria-label="TiO2 y objetivos">
+<div class="content"><div class="two" style="grid-template-columns:1fr 1fr;gap:56px">
+<div><span class="tag">La propuesta</span><h2 class="h2">Dopar con TiO<sub>2</sub> <span class="hl">(anatasa)</span></h2>
+<p class="lead" style="margin-bottom:18px">Es de bajo costo y favorece mucho la sinterización. La anatasa genera menos expansión de volumen que el rutilo.</p>
+<figure class="fig"><div class="im" style="height:330px"><img src="fig/c_tio2.jpg" alt="Estructuras del TiO2"></div><figcaption>Polimorfos del TiO<sub>2</sub>: rutilo, brookita y anatasa</figcaption></figure></div>
+<div><div class="grouplbl" style="margin-top:8px">Objetivos del estudio</div>
+<div class="steps" style="gap:14px">
+<div class="step"><div class="badge">1</div><div><p>Fabricar refractarios de MgO dopados con 0, 1, 3 y 5 % en peso de TiO<sub>2</sub>.</p></div></div>
+<div class="step"><div class="badge">2</div><div><p>Mejorar la resistencia a la corrosión y al choque térmico.</p></div></div>
+<div class="step"><div class="badge">3</div><div><p>Evaluar microestructura, fases y propiedades.</p></div></div>
+<div class="step"><div class="badge" style="background:var(--green)">4</div><div><p>Estudiar su estabilidad frente a la superaleación K417G fundida en horno VIM.</p></div></div></div>
+<figure class="fig" style="margin-top:18px"><div class="im" style="height:200px"><img src="fig/c_vim.jpg" alt="Horno VIM"></div><figcaption>Horno de fusión por inducción al vacío</figcaption></figure></div>
+</div></div></section>
+
+<!-- PARTE 2 -->
+<section class="slide sec" data-part="Parte 2" data-speaker="Kevin Ruedas" data-src="Song et al. (2025) · 2. Experimental" aria-label="Parte 2">
+<div class="content"><div class="nbig">02</div><h2>Metodología y diseño experimental</h2><p>Cuatro formulaciones, un mismo proceso y una prueba real de fusión.</p><div class="who">Kevin Ruedas</div></div></section>
+
+<section class="slide" data-part="Parte 2 · Metodología" data-speaker="Kevin Ruedas" data-src="Song et al. (2025) · 2.1 · Tabla 1 · Fig. 1 (FactSage)" aria-label="Formulaciones">
+<div class="content"><div class="two" style="grid-template-columns:1fr 600px;gap:50px">
+<div><span class="tag">Diseño de mezclas</span><h2 class="h2">Cuatro crisoles: <span class="hl">MT0, MT1, MT3 y MT5</span></h2>
+<table class="t"><thead><tr><th>Mezcla</th><th>MgO 3–1 mm</th><th>MgO 1–0 mm</th><th>MgO &lt; 0,075 mm</th><th>TiO<sub>2</sub></th></tr></thead><tbody>
+<tr><td>MT0</td><td>40</td><td>40</td><td>20</td><td><b>0</b></td></tr><tr><td>MT1</td><td>40</td><td>40</td><td>20</td><td><b>1</b></td></tr><tr><td>MT3</td><td>40</td><td>40</td><td>20</td><td><b>3</b></td></tr><tr><td>MT5</td><td>40</td><td>40</td><td>20</td><td><b>5</b></td></tr></tbody></table>
+<p class="small" style="margin-top:6px">% en peso. El TiO<sub>2</sub> se agrega como fracción fina.</p>
+<div class="panel" style="margin-top:16px" data-f="1"><b>Materias primas.</b> <span style="color:var(--ink2)">MgO electrofundido (95,8 % MgO; 1,8 % CaO; 0,9 % SiO<sub>2</sub>; 1,1 % Fe<sub>2</sub>O<sub>3</sub>) y TiO<sub>2</sub> anatasa &gt; 98,5 %.</span></div></div>
+<figure class="fig" style="margin-top:30px" data-f="2"><div class="im" style="height:470px"><img src="fig/fig01.jpg" alt="Fig. 1"></div><figcaption>Fig. 1 · Fases de enlace calculadas con FactSage según (CaO–TiO<sub>2</sub>)/SiO<sub>2</sub></figcaption></figure>
+</div></div></section>
+
+<section class="slide" data-part="Parte 2 · Metodología" data-speaker="Kevin Ruedas" data-src="Song et al. (2025) · 2.2 y 2.4 · Fig. 4" aria-label="Proceso de fabricación">
+<div class="content"><div class="two" style="grid-template-columns:1fr 560px;gap:50px">
+<div><span class="tag">Fabricación</span><h2 class="h2">Del polvo al crisol <span class="hl">en cuatro pasos</span></h2>
+<div class="steps">
+<div class="step"><div class="badge">1</div><div><h4>Mezcla</h4><p>Agregados de MgO + TiO<sub>2</sub>, con 1,5 % de agua desionizada como aglomerante.</p></div></div>
+<div class="step"><div class="badge">2</div><div><h4>Prensado isostático en frío</h4><p>240 MPa durante 2 minutos.</p></div></div>
+<div class="step"><div class="badge">3</div><div><h4>Cocción</h4><p>1680 °C durante 12 horas en horno de gas; enfriamiento natural.</p></div></div>
+<div class="step"><div class="badge" style="background:var(--green)">4</div><div><h4>Prueba de fusión VIM</h4><p>1,8 kg de superaleación K417G a 1570 °C y menos de 1 Pa; luego se corta el crisol para analizar la interfaz.</p></div></div></div></div>
+<figure class="fig" style="margin-top:6px"><div class="im" style="height:600px"><img src="fig/fig04.jpg" alt="Fig. 4"></div><figcaption>Fig. 4 · Proceso y crisoles después de la fusión</figcaption></figure>
+</div></div></section>
+
+<section class="slide" data-part="Parte 2 · Metodología" data-speaker="Kevin Ruedas" data-src="Song et al. (2025) · 2.3 y 2.4" aria-label="Caracterización">
+<div class="content"><span class="tag">Caracterización</span><h2 class="h2">Qué se midió <span class="hl">y cómo</span></h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div class="card"><div class="grouplbl">Material del crisol</div><table class="t" style="font-size:19.5px"><tbody>
+<tr><td>Fases</td><td>Difracción de rayos X (DRX)</td></tr>
+<tr><td>Microestructura</td><td>MEB con EDS</td></tr>
+<tr><td>Porosidad</td><td>Total, abierta y cerrada</td></tr>
+<tr><td>CMOR</td><td>Flexión en 3 puntos, σ = 3FL / 2BH², L = 125 mm</td></tr>
+<tr><td>Choque térmico</td><td>950 °C, 30 min → aire a 0,1 MPa, 5 min (GB/T 30873)</td></tr>
+<tr><td>HMOR</td><td>1400 °C, 30 min</td></tr></tbody></table></div>
+<div class="card" data-f="1"><div class="grouplbl">Aleación K417G fundida</div>
+<p style="margin:0 0 12px;font-size:18px;color:var(--ink2)">0,13 C · 9 Cr · 3 Mo · 4,4 Ti · <b>5,5 Al</b> · 10 Co · Ni balance (% en peso)</p>
+<table class="t" style="font-size:19.5px"><tbody>
+<tr><td>Interfaz</td><td>MEB-EDS del crisol cortado</td></tr>
+<tr><td>O, N, H</td><td>Analizador de gases</td></tr>
+<tr><td>Mg</td><td>ICP-AES</td></tr></tbody></table>
+<div class="note" style="margin-top:16px">El Al de la aleación es el principal agente corrosivo</div></div>
+</div></div></section>
+
+<!-- PARTE 3 -->
+<section class="slide sec" data-part="Parte 3" data-speaker="Sebastián Pereira" data-src="Song et al. (2025) · 3.1" aria-label="Parte 3">
+<div class="content"><div class="nbig">03</div><h2>Evolución mineralógica y microestructura</h2><p>Qué fases forma el TiO<sub>2</sub> y cómo cambia la unión entre granos.</p><div class="who">Sebastián Pereira</div></div></section>
+
+<section class="slide" data-part="Parte 3 · Mineralogía" data-speaker="Sebastián Pereira" data-src="Song et al. (2025) · 3.1 · Fig. 5 · Tabla 2 · Ecuaciones 1–3" aria-label="Evolución de fases">
+<div class="content"><span class="tag">Fases de enlace (DRX + MEB-EDS)</span><h2 class="h2">El TiO<sub>2</sub> convierte silicatos <span class="hl">en titanatos</span></h2>
+<div class="phase">
+<div class="card"><h3>MT0</h3><div class="w">0 % TiO<sub>2</sub></div><span class="chip gray">Ca<sub>2</sub>SiO<sub>4</sub> · 2130 °C</span></div>
+<div class="card" data-f="1"><h3>MT1</h3><div class="w">1 % TiO<sub>2</sub></div><span class="chip">CaTiO<sub>3</sub> perovskita</span><span class="chip bad">CaMgSiO<sub>4</sub> monticelita · 1490 °C</span></div>
+<div class="card" data-f="2"><h3>MT3</h3><div class="w">3 % TiO<sub>2</sub></div><span class="chip">CaTiO<sub>3</sub></span><span class="chip good">Mg<sub>2</sub>SiO<sub>4</sub> forsterita</span><span class="chip good">Mg<sub>2</sub>TiO<sub>4</sub> qandilita</span></div>
+<div class="card" data-f="3"><h3>MT5</h3><div class="w">5 % TiO<sub>2</sub></div><span class="chip">CaTiO<sub>3</sub></span><span class="chip good">Mg<sub>2</sub>SiO<sub>4</sub></span><span class="chip good" style="font-weight:700">Más Mg<sub>2</sub>TiO<sub>4</sub></span></div></div>
+<div style="margin-top:22px" data-f="1"><div class="eq">TiO<sub>2</sub> + Ca<sub>2</sub>SiO<sub>4</sub> + MgO → CaTiO<sub>3</sub> + CaMgSiO<sub>4</sub><small>(1) · el TiO<sub>2</sub> tiene más afinidad por el CaO que el SiO<sub>2</sub></small></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" data-f="2"><div class="eq">TiO<sub>2</sub> + CaMgSiO<sub>4</sub> + MgO → CaTiO<sub>3</sub> + Mg<sub>2</sub>SiO<sub>4</sub><small>(2)</small></div><div class="eq">TiO<sub>2</sub> + 2MgO → Mg<sub>2</sub>TiO<sub>4</sub><small>(3) · por encima de 0,3 % de solubilidad del TiO<sub>2</sub> en MgO</small></div></div>
+</div></section>
+
+<section class="slide" data-part="Parte 3 · Mineralogía" data-speaker="Sebastián Pereira" data-src="Song et al. (2025) · 4.2 · Fig. 15 (FactSage 8.2)" aria-label="Sinterización por fase líquida">
+<div class="content"><div class="two" style="grid-template-columns:470px 1fr;gap:44px">
+<div><span class="tag">Sinterización</span><h2 class="h2">Densifica <span class="hl">con fase líquida</span></h2>
+<div class="steps">
+<div class="step"><div class="badge">1</div><div><p>El eutéctico MgO–TiO<sub>2</sub> está a <b>1620 °C</b>; la cocción fue a <b>1680 °C</b>.</p></div></div>
+<div class="step"><div class="badge">2</div><div><p>Se forma un líquido TiO<sub>2</sub>–MgO–CaO–SiO<sub>2</sub> que llega a <b>10,5 %</b> en peso (FactSage, 1700 °C).</p></div></div>
+<div class="step"><div class="badge" style="background:var(--green)">3</div><div><p>El líquido favorece el transporte de masa y el reacomodo de granos: el TiO<sub>2</sub> actúa como agente de sinterización.</p></div></div></div></div>
+<div><figure class="fig"><div class="im" style="height:290px"><img src="fig/fig15ab.jpg" alt="Fig. 15 a y b"></div><figcaption>Fig. 15 (a, b) · Diagrama MgO–TiO<sub>2</sub> y ternario MgO–Ca<sub>2</sub>SiO<sub>4</sub>–TiO<sub>2</sub> a 1700 °C</figcaption></figure>
+<figure class="fig" style="margin-top:12px"><div class="im" style="height:290px"><img src="fig/fig15cd.jpg" alt="Fig. 15 c y d"></div><figcaption>Fig. 15 (c, d) · Contenido de escoria y fase líquida observada</figcaption></figure></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 3 · Microestructura" data-speaker="Sebastián Pereira" data-src="Song et al. (2025) · 3.1 · Fig. 6" aria-label="Interfaz matriz agregados">
+<div class="content"><div class="two" style="grid-template-columns:480px 1fr;gap:44px">
+<div><span class="tag">Microestructura</span><h2 class="h2">Unión matriz–agregado: <span class="hl">mejora y luego se separa</span></h2>
+<div class="steps">
+<div class="step"><div class="badge">0</div><div><p><b>MT0:</b> la interfaz entre agregado y matriz se distingue con claridad.</p></div></div>
+<div class="step"><div class="badge">3</div><div><p><b>MT3:</b> la interfaz se vuelve difusa: unión más fuerte, mejor resistencia mecánica.</p></div></div>
+<div class="step"><div class="badge" style="background:var(--amber)">5</div><div><p><b>MT5:</b> aparece una separación alrededor del agregado por la contracción de sinterización de la matriz.</p></div></div></div></div>
+<figure class="fig"><div class="im" style="height:600px"><img src="fig/fig06.jpg" alt="Fig. 6"></div><figcaption>Fig. 6 · Interfaz agregado/matriz con 0, 1, 3 y 5 % de TiO<sub>2</sub></figcaption></figure>
+</div></div></section>
+
+<!-- PARTE 4 -->
+<section class="slide sec" data-part="Parte 4" data-speaker="Fabián Rivera" data-src="Song et al. (2025) · 3.2 y 4.3" aria-label="Parte 4">
+<div class="content"><div class="nbig">04</div><h2>Propiedades físicas, mecánicas y choque térmico</h2><p>Menos porosidad abierta y un crisol que se agrieta sin romperse.</p><div class="who">Fabián Rivera</div></div></section>
+
+<section class="slide" data-part="Parte 4 · Propiedades" data-speaker="Fabián Rivera" data-src="Song et al. (2025) · 3.2 · Fig. 7 (a, b)" aria-label="Porosidad y densidad">
+<div class="content"><span class="tag">Propiedades físicas</span><h2 class="h2">Los poros abiertos <span class="hl">pasan a ser cerrados</span></h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px">
+<div class="card kpi"><div class="num">12,6 → 9,76<small> %</small></div><p>Porosidad abierta, de MT0 a MT5</p></div>
+<div class="card kpi" data-f="1"><div class="num">&lt; 1<small> %</small></div><p>Cambio de la porosidad total: los poros se cierran, no desaparecen</p></div>
+<div class="card kpi" data-f="2"><div class="num">3,12 → 3,18<small> g/cm³</small></div><p>Densidad aparente; la relativa se mantiene en 87,1 % (el TiO<sub>2</sub> es más denso: 4,26 g/cm³)</p></div></div>
+<figure class="fig"><div class="im" style="height:330px"><img src="fig/fig07ab.jpg" alt="Fig. 7 a y b"></div><figcaption>Fig. 7 (a, b) · Porosidad abierta y cerrada; densidad aparente y relativa</figcaption></figure>
+</div></section>
+
+<section class="slide" data-part="Parte 4 · Propiedades" data-speaker="Fabián Rivera" data-src="Song et al. (2025) · 3.2 · Fig. 7 (c, d)" aria-label="Resistencia mecánica">
+<div class="content"><div class="two" style="grid-template-columns:1fr 720px;gap:40px">
+<div><span class="tag">Propiedades mecánicas</span><h2 class="h2">MT5 pierde <span class="hl">menos resistencia</span> tras el choque térmico</h2>
+<svg class="ch" viewBox="0 0 760 250" style="width:100%;height:240px">
+<text x="0" y="18" class="lab" style="font-weight:600">Pérdida de resistencia después del choque térmico</text>
+<g transform="translate(0,40)">
+<text x="0" y="30" class="lab">MT1</text><rect x="80" y="12" width="504" height="28" rx="6" fill="#B83A2A"/><text x="596" y="33" class="val" style="fill:#B83A2A">56 %</text>
+<text x="0" y="90" class="lab">MT3</text><rect x="80" y="72" width="477" height="28" rx="6" fill="#C9786C"/><text x="569" y="93" class="val" style="fill:#B83A2A">53 %</text>
+<text x="0" y="150" class="lab">MT5</text><rect x="80" y="132" width="306" height="28" rx="6" fill="#2B7336"/><text x="398" y="153" class="val" style="fill:#2B7336">34 %</text>
+</g></svg>
+<div class="steps" style="gap:12px;margin-top:4px">
+<div class="step" data-f="1"><div class="badge" style="background:var(--red)">!</div><div><p><b>HMOR a 1400 °C:</b> cae de 13,3 a 2 MPa con 1 % (monticelita, funde a 1490 °C) y sube hasta 7,5 MPa con 5 %.</p></div></div>
+<div class="step" data-f="2"><div class="badge">↑</div><div><p><b>CMOR:</b> máximo cercano a 27,3 MPa con 3 % de TiO<sub>2</sub>; baja con 5 % por la separación matriz–agregado.</p></div></div></div></div>
+<figure class="fig" style="margin-top:110px"><div class="im" style="height:300px"><img src="fig/fig07cd.jpg" alt="Fig. 7 c y d"></div><figcaption>Fig. 7 (c, d) · HMOR a 1400 °C; CMOR y resistencia residual</figcaption></figure>
+</div></div></section>
+
+<section class="slide" data-part="Parte 4 · Choque térmico" data-speaker="Fabián Rivera" data-src="Song et al. (2025) · 4.3 · Figs. 8, 16 y 17" aria-label="Choque térmico">
+<div class="content"><div class="two" style="grid-template-columns:1fr 1fr;gap:44px">
+<div><span class="tag">Choque térmico</span><h2 class="h2">Microgrietas que <span class="hl">frenan la falla</span></h2>
+<div class="card kpi" style="display:flex;gap:30px;align-items:center;margin-bottom:16px"><div><div class="num" style="font-size:44px">17,5</div><p>MgO</p></div><div style="font-size:30px;color:var(--mut)">vs</div><div><div class="num" style="font-size:44px;color:var(--green)">13,5</div><p>Mg<sub>2</sub>TiO<sub>4</sub></p></div><p style="margin:0;max-width:240px">Coeficiente de expansión térmica (× 10⁻⁶ K⁻¹, ~1600 °C)</p></div>
+<p class="lead" style="font-size:20px">La diferencia de 4 × 10⁻⁶ K⁻¹ genera microgrietas que liberan las tensiones térmicas, y el Mg<sub>2</sub>TiO<sub>4</sub> baja la expansión del conjunto por encima de 1000 °C.</p>
+<div class="panel" style="margin-top:18px;background:var(--green-l)" data-f="1"><b style="color:var(--green)">Resistencia al choque térmico:</b> <span style="color:var(--ink2)">MT5 &gt; MT0 &gt; MT3 &gt; MT1. Tras fundir la aleación, solo MT5 conservó su integridad.</span></div></div>
+<div><figure class="fig"><div class="im" style="height:250px"><img src="fig/fig16.jpg" alt="Fig. 16"></div><figcaption>Fig. 16 · Microgrietas en MT5 por diferencia de expansión</figcaption></figure>
+<figure class="fig" style="margin-top:14px"><div class="im" style="height:300px"><img src="fig/fig17.jpg" alt="Fig. 17"></div><figcaption>Fig. 17 · Coeficiente de expansión térmica de MT0 y MT5</figcaption></figure></div>
+</div></div></section>
+
+<!-- PARTE 5 -->
+<section class="slide sec" data-part="Parte 5" data-speaker="Deivis Jiménez" data-src="Song et al. (2025) · 3.3" aria-label="Parte 5">
+<div class="content"><div class="nbig">05</div><h2>Corrosión y efecto sobre la aleación</h2><p>Qué le hace el aluminio de la aleación al crisol, y qué le devuelve el crisol a la aleación.</p><div class="who">Deivis Jiménez</div></div></section>
+
+<section class="slide" data-part="Parte 5 · Corrosión" data-speaker="Deivis Jiménez" data-src="Song et al. (2025) · 3.3.1 · Figs. 9 y 10 · Ecuaciones 4–6" aria-label="Crisol de MgO">
+<div class="content"><div class="two" style="grid-template-columns:1fr 600px;gap:44px">
+<div><span class="tag">Crisol de MgO sin dopar</span><h2 class="h2">El aluminio <span class="hl">reduce el MgO</span></h2>
+<div class="eq">[Al]<sub>Ni</sub> + MgO → Al<sub>2</sub>O<sub>3</sub> + [Mg]<sub>Ni</sub><small>(4) · el Mg pasa a la aleación</small></div>
+<div class="eq">Al<sub>2</sub>O<sub>3</sub> + MgO → MgAl<sub>2</sub>O<sub>4</sub><small>(5) · se forma espinela en la pared</small></div>
+<div class="eq">4[Al]<sub>Ni</sub> + 5MgO + Ca<sub>2</sub>SiO<sub>4</sub> → 2CaAl<sub>2</sub>O<sub>4</sub> + 5[Mg]<sub>Ni</sub> + [Si]<sub>Ni</sub><small>(6) · aluminatos de calcio que ablandan la capa</small></div>
+<div class="panel" style="margin-top:14px" data-f="1"><b>Resultado:</b> <span style="color:var(--ink2)">capa de reacción de 360 μm rica en Al y Ca. La agitación electromagnética arrastra MgAl<sub>2</sub>O<sub>4</sub> y CaAl<sub>2</sub>O<sub>4</sub> como inclusiones.</span></div></div>
+<div><figure class="fig"><div class="im" style="height:330px"><img src="fig/fig09.jpg" alt="Fig. 9"></div><figcaption>Fig. 9 · Interfaz K417G / MgO con mapas EDS</figcaption></figure>
+<figure class="fig" style="margin-top:12px"><div class="im" style="height:190px"><img src="fig/fig10.jpg" alt="Fig. 10"></div><figcaption>Fig. 10 · Capa de reacción con aluminatos de calcio</figcaption></figure></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 5 · Corrosión" data-speaker="Deivis Jiménez" data-src="Song et al. (2025) · 3.3.2 · Figs. 11 y 12 · Tabla 3" aria-label="Crisoles dopados">
+<div class="content"><span class="tag">Crisoles dopados</span><h2 class="h2">Capa de reacción: <span class="hl">de 230 μm a 58–81 μm</span></h2>
+<div class="two" style="grid-template-columns:1fr 600px;gap:44px">
+<div><p class="lead" style="font-size:20px;margin-bottom:16px">El TiO<sub>2</sub> densifica la matriz y frena la infiltración del Al. En MT5 la capa tiene cuatro zonas:</p>
+<svg class="ch" viewBox="0 0 760 300" style="width:100%;height:300px">
+<text x="0" y="20" class="lab" style="font-weight:600">Aleación K417G</text>
+<rect x="0" y="30" width="110" height="250" rx="8" fill="#D5DBE1"/><text x="55" y="160" text-anchor="middle" class="lab" transform="rotate(-90 55 160)">metal fundido</text>
+<rect x="120" y="30" width="140" height="250" fill="#1D5486"/><rect x="262" y="30" width="140" height="250" fill="#5E8DB8"/><rect x="404" y="30" width="160" height="250" fill="#A9C3DC"/><rect x="566" y="30" width="190" height="250" fill="#E3EAF1"/>
+<g style="font-size:17px;font-weight:600"><text x="190" y="140" text-anchor="middle" style="fill:#fff">1</text><text x="332" y="140" text-anchor="middle" style="fill:#fff">2</text><text x="484" y="140" text-anchor="middle" style="fill:#0B3A63">3</text><text x="661" y="140" text-anchor="middle" style="fill:#0B3A63">4</text></g>
+<g style="font-size:15px"><text x="190" y="170" text-anchor="middle" style="fill:#fff">MgAl₂O₄</text><text x="190" y="190" text-anchor="middle" style="fill:#DCE8F3">espinela</text><text x="332" y="170" text-anchor="middle" style="fill:#fff">MgTiO₃</text><text x="332" y="190" text-anchor="middle" style="fill:#E6EEF6">geikielita</text><text x="484" y="170" text-anchor="middle" style="fill:#0B3A63">Mg₂TiO₄</text><text x="484" y="190" text-anchor="middle" style="fill:#0B3A63">+ MgO</text><text x="661" y="170" text-anchor="middle" style="fill:#0B3A63">matriz de MgO</text></g>
+<text x="440" y="20" class="lab" style="font-weight:600">Pared del crisol MT5 →</text>
+</svg></div>
+<figure class="fig"><div class="im" style="height:470px"><img src="fig/fig12.jpg" alt="Fig. 12"></div><figcaption>Fig. 12 · Interfaz Mg<sub>2</sub>TiO<sub>4</sub> / K417G con mapas EDS</figcaption></figure>
+</div></div></section>
+
+<section class="slide" data-part="Parte 5 · Aleación" data-speaker="Deivis Jiménez" data-src="Song et al. (2025) · 3.3.3 · Fig. 13 (valores de MT1 y MgAl₂O₄ leídos de la figura)" aria-label="Contaminación de la aleación">
+<div class="content"><span class="tag">Pureza de la aleación</span><h2 class="h2">Impurezas totales: <span class="hl">0,0021 → 0,0007 %</span></h2>
+<div class="two" style="grid-template-columns:1fr 470px;gap:44px">
+<svg class="ch" viewBox="0 0 900 470" style="width:100%;height:470px">
+<text x="0" y="18" class="lab" style="font-weight:600">Impurezas (Mg + O) en la K417G después de fundir, % en peso</text>
+<g transform="translate(70,40)"><line x1="0" y1="380" x2="800" y2="380" class="ax"/>
+<g style="font-size:14px"><text x="-10" y="384" text-anchor="end">0</text><text x="-10" y="294" text-anchor="end">0,0005</text><text x="-10" y="204" text-anchor="end">0,0010</text><text x="-10" y="114" text-anchor="end">0,0015</text><text x="-10" y="24" text-anchor="end">0,0020</text></g>
+<line x1="0" y1="290" x2="800" y2="290" class="ax" stroke-dasharray="3 5"/><line x1="0" y1="200" x2="800" y2="200" class="ax" stroke-dasharray="3 5"/><line x1="0" y1="110" x2="800" y2="110" class="ax" stroke-dasharray="3 5"/><line x1="0" y1="20" x2="800" y2="20" class="ax" stroke-dasharray="3 5"/>
+<rect x="30" y="290" width="90" height="90" rx="5" fill="#B9C1C9"/><text x="75" y="282" text-anchor="middle" class="val" style="fill:#5B6670">≈0,0005</text><text x="75" y="404" text-anchor="middle">Lingote</text><text x="75" y="422" text-anchor="middle">original</text>
+<rect x="160" y="2" width="90" height="378" rx="5" fill="#B83A2A"/><text x="205" y="-6" text-anchor="middle" class="val" style="fill:#B83A2A">0,0021</text><text x="205" y="404" text-anchor="middle">MT0</text><text x="205" y="422" text-anchor="middle">(MgO)</text>
+<rect x="290" y="128" width="90" height="252" rx="5" fill="#C9786C"/><text x="335" y="120" text-anchor="middle" class="val" style="fill:#B83A2A">≈0,0014</text><text x="335" y="404" text-anchor="middle">MT1</text>
+<rect x="420" y="254" width="90" height="126" rx="5" fill="#2B7336"/><text x="465" y="246" text-anchor="middle" class="val" style="fill:#2B7336">0,0007</text><text x="465" y="404" text-anchor="middle">MT3</text>
+<rect x="550" y="254" width="90" height="126" rx="5" fill="#2B7336"/><text x="595" y="246" text-anchor="middle" class="val" style="fill:#2B7336">0,0007</text><text x="595" y="404" text-anchor="middle">MT5</text>
+<rect x="680" y="200" width="90" height="180" rx="5" fill="#1D5486"/><text x="725" y="192" text-anchor="middle" class="val">≈0,0010</text><text x="725" y="404" text-anchor="middle">MgAl₂O₄</text>
+</g></svg>
+<div><div class="card kpi" style="margin-bottom:14px"><div class="num">0,0015 → 0,0002<small> %</small></div><p>Mg residual en la aleación al subir el TiO<sub>2</sub> hasta 5 %</p></div>
+<div class="card kpi" style="margin-bottom:14px" data-f="1"><div class="num">0,0004<small> %</small></div><p>Oxígeno mínimo, con MT3</p></div>
+<div class="panel" style="background:var(--green-l)" data-f="2"><b style="color:var(--green)">Estabilidad:</b> <span style="color:var(--ink2)">MgO + TiO<sub>2</sub> &gt; MgAl<sub>2</sub>O<sub>4</sub> &gt; MgO</span></div></div>
+</div></div></section>
+
+<!-- PARTE 6 -->
+<section class="slide sec" data-part="Parte 6" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · 4. Discusión · 5. Conclusiones" aria-label="Parte 6">
+<div class="content"><div class="nbig">06</div><h2>Discusión termodinámica y conclusiones</h2><p>¿Por qué funciona el TiO<sub>2</sub>? La energía libre de Gibbs lo explica.</p><div class="who">Gabriel Franco</div></div></section>
+
+<section class="slide" data-part="Parte 6 · Discusión" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · 4.1 · Fig. 14 (a) · ΔG° leídos de la figura a ~1680 °C · puntos de fusión de la sección 3.2" aria-label="Gibbs de las fases de enlace">
+<div class="content"><span class="tag">4.1 · Fases de enlace</span><h2 class="h2">Todas las reacciones del TiO<sub>2</sub> son <span class="hl">espontáneas</span></h2>
+<div class="two" style="grid-template-columns:1fr 1fr;gap:40px">
+<div><svg class="ch" viewBox="0 0 700 330" style="width:100%;height:320px">
+<text x="0" y="18" class="lab" style="font-weight:600">ΔG° a ~1680 °C (kJ), Fig. 14 a</text>
+<g transform="translate(0,40)" style="font-size:15px">
+<text x="0" y="22">(5) Ca₃MgSi₂O₈ → CaTiO₃ + Mg₂SiO₄</text><rect x="370" y="6" width="274" height="24" rx="5" fill="#0B3A63"/><text x="652" y="24" class="val">≈ −137</text>
+<text x="0" y="72">(2) Ca₂SiO₄ → CaTiO₃ + Ca₃MgSi₂O₈</text><rect x="370" y="56" width="126" height="24" rx="5" fill="#1D5486"/><text x="504" y="74" class="val">≈ −63</text>
+<text x="0" y="122">(1) Ca₂SiO₄ → CaTiO₃ + CaMgSiO₄</text><rect x="370" y="106" width="104" height="24" rx="5" fill="#1D5486"/><text x="482" y="124" class="val">≈ −52</text>
+<text x="0" y="172">(3) CaMgSiO₄ → CaTiO₃ + Mg₂SiO₄</text><rect x="370" y="156" width="94" height="24" rx="5" fill="#1D5486"/><text x="472" y="174" class="val">≈ −47</text>
+<text x="0" y="222">(4) MgO → Mg₂TiO₄</text><rect x="370" y="206" width="66" height="24" rx="5" fill="#5E8DB8"/><text x="444" y="224" class="val">≈ −33</text>
+<text x="0" y="272" style="fill:#76838F">Todas con TiO₂ (y MgO) como reactivo · barras = |ΔG°|</text></g></svg>
+<p class="lead" style="font-size:19px" data-f="1">ΔG° &lt; 0 en todo el intervalo hasta 1700 °C: <b>el TiO<sub>2</sub> consume los silicatos</b> en lugar de quedarse inerte.</p></div>
+<div data-f="2"><svg class="ch" viewBox="0 0 700 380" style="width:100%;height:370px">
+<text x="0" y="18" class="lab" style="font-weight:600">Punto de fusión de cada fase de enlace (°C)</text>
+<g transform="translate(150,40)"><line x1="0" y1="0" x2="0" y2="300" class="ax"/>
+<g style="font-size:16px"><text x="-12" y="28" text-anchor="end" style="fill:#B83A2A;font-weight:600">CaMgSiO₄</text><text x="-12" y="88" text-anchor="end">Mg₂TiO₄</text><text x="-12" y="148" text-anchor="end">Mg₂SiO₄</text><text x="-12" y="208" text-anchor="end">CaTiO₃</text><text x="-12" y="268" text-anchor="end" style="fill:#5B6670">Ca₂SiO₄</text></g>
+<rect x="0" y="10" width="190" height="28" rx="5" fill="#B83A2A"/><text x="182" y="30" text-anchor="end" class="val" style="fill:#fff">1490</text>
+<rect x="0" y="70" width="301" height="28" rx="5" fill="#2B7336"/><text x="309" y="90" class="val" style="fill:#2B7336">1767</text>
+<rect x="0" y="130" width="353" height="28" rx="5" fill="#2B7336"/><text x="361" y="150" class="val" style="fill:#2B7336">1898</text>
+<rect x="0" y="190" width="386" height="28" rx="5" fill="#2B7336"/><text x="394" y="210" class="val" style="fill:#2B7336">1980</text>
+<rect x="0" y="250" width="446" height="28" rx="5" fill="#B9C1C9"/><text x="454" y="270" class="val" style="fill:#5B6670">2130</text>
+<line x1="222" y1="-6" x2="222" y2="300" class="ref"/><text x="228" y="316" style="fill:#B83A2A;font-size:14px">1570 °C · fusión de la K417G</text>
+<line x1="154" y1="-6" x2="154" y2="300" class="ref" style="stroke:#A86B12"/><text x="40" y="336" style="fill:#A86B12;font-size:14px">1400 °C · ensayo HMOR</text>
+</g></svg>
+<p class="small" style="font-size:16px">Eje desde ~1000 °C. La monticelita (CaMgSiO<sub>4</sub>) funde por debajo de la temperatura de trabajo.</p></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 6 · Discusión" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · 4.4 · Fig. 18 (a, b)" aria-label="Gibbs frente al aluminio">
+<div class="content"><span class="tag">4.4 · Frente al aluminio de la aleación</span><h2 class="h2">El Al<sub>2</sub>O<sub>3</sub> solo ataca <span class="hl">al MgO y al Mg<sub>2</sub>TiO<sub>4</sub></span></h2>
+<div class="two" style="grid-template-columns:1fr 470px;gap:40px">
+<div><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px"><figure class="fig"><div class="im" style="height:330px"><img src="fig/fig18a.jpg" alt="Fig. 18 a"></div><figcaption>Fig. 18 a · Reacciones del Al</figcaption></figure><figure class="fig"><div class="im" style="height:330px"><img src="fig/fig18b.jpg" alt="Fig. 18 b"></div><figcaption>Fig. 18 b · Reacciones del Al<sub>2</sub>O<sub>3</sub></figcaption></figure></div>
+<div class="panel" style="margin-top:14px" data-f="1"><b>Al metálico (a):</b> <span style="color:var(--ink2)">casi todas sus reacciones son positivas hasta ~1100 °C, pero a 1570 °C todas son espontáneas. Con el CaTiO<sub>3</sub> lo es siempre, y aun así no reacciona: la matriz densa impide el contacto.</span></div></div>
+<div><div class="grouplbl">Al<sub>2</sub>O<sub>3</sub> contra cada fase (b)</div>
+<div class="steps" style="gap:10px">
+<div class="eq" style="border-color:var(--green)">+ Ca<sub>2</sub>SiO<sub>4</sub> · Ca<sub>3</sub>SiO<sub>5</sub><small>ΔG° ≈ +260 a +690 kJ/mol · no reacciona</small></div>
+<div class="eq" style="border-color:var(--green)">+ CaTiO<sub>3</sub><small>ΔG° ≈ +40 kJ/mol · no reacciona</small></div>
+<div class="eq" style="border-color:var(--red)" data-f="2">+ MgO → MgAl<sub>2</sub>O<sub>4</sub><small>ΔG° &lt; 0 · espinela</small></div>
+<div class="eq" style="border-color:var(--red)" data-f="2">+ Mg<sub>2</sub>TiO<sub>4</sub> → MgAl<sub>2</sub>O<sub>4</sub> + MgTiO<sub>3</sub><small>ΔG° &lt; 0 · explica las zonas 1 y 2 de MT5</small></div></div>
+<div class="note" style="margin-top:12px" data-f="3">El exceso de TiO<sub>2</sub> forma Mg<sub>2</sub>TiO<sub>4</sub> y reinstala la espinela</div></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 6 · Discusión" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · 4.4 · radios iónicos de la sección 4.4" aria-label="Mecanismo">
+<div class="content"><span class="tag">4.4 · Mecanismo</span><h2 class="h2">Tres razones por las que <span class="hl">el crisol resiste</span></h2>
+<div class="two" style="grid-template-columns:1fr 1fr;gap:50px">
+<div class="steps" style="gap:22px">
+<div class="step"><div class="badge">1</div><div><h4>Matriz densa</h4><p>Menos porosidad abierta: el metal no se infiltra y el área de contacto con el baño es menor.</p></div></div>
+<div class="step" data-f="1"><div class="badge">2</div><div><h4>Solución sólida</h4><p>El Ti⁴⁺ sustituye al Mg²⁺ en los bordes de grano del MgO y crea vacancias catiónicas.</p></div></div>
+<div class="step" data-f="2"><div class="badge" style="background:var(--green)">3</div><div><h4>Afinidad Ti–O</h4><p>El titanio retiene el oxígeno con fuerza: el MgO se vuelve químicamente más estable.</p></div></div></div>
+<div><svg class="ch" viewBox="0 0 620 260" style="width:100%;height:240px" data-f="1">
+<circle cx="150" cy="120" r="78" fill="#E3EAF1" stroke="#1D5486" stroke-width="2"/><text x="150" y="116" text-anchor="middle" class="lab" style="font-weight:700;fill:#0B3A63">Mg²⁺</text><text x="150" y="140" text-anchor="middle">78 pm</text>
+<circle cx="420" cy="120" r="64" fill="#E8F3EA" stroke="#2B7336" stroke-width="2"/><text x="420" y="116" text-anchor="middle" class="lab" style="font-weight:700;fill:#2B7336">Ti⁴⁺</text><text x="420" y="140" text-anchor="middle">64 pm</text>
+<path d="M245 120H340" stroke="#76838F" stroke-width="2" marker-end="url(#a6)"/><defs><marker id="a6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#76838F"/></marker></defs>
+<text x="310" y="240" text-anchor="middle" style="fill:#76838F">Radios a escala · cada sustitución deja una vacancia catiónica</text></svg>
+<div class="card" data-f="3"><div class="grouplbl" style="color:var(--green)">Beneficios para la aleación</div>
+<p style="margin:0 0 8px;font-size:18px;color:var(--ink2)">1 · Menos Mg y O disueltos → menos inclusiones endógenas</p>
+<p style="margin:0 0 8px;font-size:18px;color:var(--ink2)">2 · Capas de reacción delgadas → menos inclusiones exógenas</p>
+<p style="margin:0;font-size:18px;color:var(--ink2)">3 · Menos contaminación en hornos de uso continuo</p></div></div>
+</div></div></section>
+
+<section class="slide" data-part="Parte 6 · Discusión" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · 4.1 y 4.2" aria-label="Comparación con otros dopantes">
+<div class="content"><span class="tag">4.1 y 4.2 · Frente a otros dopantes</span><h2 class="h2">¿Por qué TiO<sub>2</sub> y no <span class="hl">otro óxido?</span></h2>
+<table class="t" style="font-size:19px"><thead><tr><th>Dopante</th><th>Cómo actúa</th><th>Limitación según el artículo</th></tr></thead><tbody>
+<tr><td>La<sub>2</sub>O<sub>3</sub> · Y<sub>2</sub>O<sub>3</sub></td><td>Transforman la CaMgSiO<sub>4</sub> en un silicato rico en La o Y</td><td>Actúan por solución sólida o reacción in situ, sin fase líquida</td></tr>
+<tr><td>ZrO<sub>2</sub></td><td>Útil en MgO de baja ley (CaO/SiO<sub>2</sub> &lt; 2)</td><td>Perjudicial si CaO/SiO<sub>2</sub> &gt; 2</td></tr>
+<tr><td>Al<sub>2</sub>O<sub>3</sub> · CeO<sub>2</sub></td><td>Solución sólida o reacción in situ</td><td>No actúan como agente de sinterización con fase líquida</td></tr>
+<tr style="background:var(--green-l)"><td style="color:var(--green)">TiO<sub>2</sub></td><td><b>Fases de alto punto de fusión (CaTiO<sub>3</sub>, Mg<sub>2</sub>SiO<sub>4</sub>) y sinterización con fase líquida</b></td><td><b>Bajo costo</b>; con exceso forma Mg<sub>2</sub>TiO<sub>4</sub>, que reacciona con Al<sub>2</sub>O<sub>3</sub></td></tr>
+</tbody></table>
+<p class="lead" style="margin-top:24px;font-size:21px" data-f="1">Conclusión de la discusión: el TiO<sub>2</sub> resuelve con un solo aditivo la sinterización, el choque térmico y la estabilidad química, <b>con un óptimo entre 3 y 5 %</b>.</p>
+</div></section>
+
+<section class="slide" data-part="Parte 6 · Conclusiones" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · Resumen · 5. Conclusiones" aria-label="Conclusiones">
+<div class="content"><span class="tag">5 · Conclusiones</span><h2 class="h2">El MgO con TiO<sub>2</sub> <span class="hl">supera al MgO y a la espinela</span></h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:24px">
+<div class="card kpi"><div class="num" style="font-size:42px">12,62 → 9,76<small> %</small></div><p>Porosidad abierta con 5 % de TiO<sub>2</sub></p></div>
+<div class="card kpi" data-f="1"><div class="num" style="font-size:42px">34<small> %</small></div><p>Pérdida de resistencia de MT5 por choque térmico, frente a 56 % de MT1</p></div>
+<div class="card kpi" data-f="2"><div class="num" style="font-size:42px">58–81<small> μm</small></div><p>Capa de reacción en crisoles dopados, frente a 360 μm en MgO</p></div>
+<div class="card kpi" data-f="3"><div class="num" style="font-size:42px;color:var(--green)">0,0021 → 0,0007<small> %</small></div><p>Impurezas totales en la superaleación</p></div></div>
+<div class="panel" data-f="4" style="background:var(--green-l)"><p style="margin:0;font-size:22px;line-height:1.5;color:var(--ink)"><b style="color:var(--green)">En síntesis:</b> el TiO<sub>2</sub> resuelve la sinterización difícil, el choque térmico y la corrosión del MgO. El crisol dopado es una alternativa prometedora para fundir superaleaciones de níquel de alta pureza por VIM.</p></div>
+</div></section>
+
+<section class="slide" data-part="Parte 6 · Conclusiones" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · secciones 2.3, 3.2, 4.4 · lectura crítica del grupo" aria-label="Lectura crítica">
+<div class="content"><span class="tag">Lectura crítica</span><h2 class="h2">Lo que el artículo <span class="hl">deja abierto</span></h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div class="card"><h4 style="font:700 22px var(--slab);color:var(--navy);margin:0 0 6px">Interacción con Mg<sub>2</sub>TiO<sub>4</sub> y CaTiO<sub>3</sub></h4><p style="margin:0;font-size:18px;color:var(--ink2)">Los autores dicen que «requiere mayor aclaración»: el exceso de TiO<sub>2</sub> vuelve a formar espinela en MT5.</p></div>
+<div class="card" data-f="1"><h4 style="font:700 22px var(--slab);color:var(--navy);margin:0 0 6px">Compromiso en 5 %</h4><p style="margin:0;font-size:18px;color:var(--ink2)">MT5 resiste mejor el choque térmico, pero su CMOR baja por la separación matriz–agregado. El óptimo depende del uso.</p></div>
+<div class="card" data-f="2"><h4 style="font:700 22px var(--slab);color:var(--navy);margin:0 0 6px">Base experimental</h4><p style="margin:0;font-size:18px;color:var(--ink2)">Una sola aleación (K417G), HMOR con dos probetas y datos del MgO puro tomados de un trabajo previo.</p></div>
+<div class="card" data-f="3"><h4 style="font:700 22px var(--slab);color:var(--navy);margin:0 0 6px">Siguiente paso natural</h4><p style="margin:0;font-size:18px;color:var(--ink2)">Probar varias coladas seguidas y otras superaleaciones con más Al o Ti para ver la vida útil del crisol.</p></div></div>
+</div></section>
+
+<section class="slide" data-part="Cierre" data-speaker="Gabriel Franco" data-src="Song et al. (2025) · Journal of Materials Research and Technology 35, 402–415" aria-label="Cierre">
+<div class="content" style="display:flex;flex-direction:column;justify-content:center"><span class="tag" style="align-self:flex-start">Gracias</span><h1 class="h1" style="font-size:58px">Un dopante barato, <span class="hl">un crisol más limpio</span></h1>
+<p class="lead">MgO + 3–5 % TiO<sub>2</sub>: más denso, más resistente al choque térmico y más estable frente a la superaleación fundida.</p>
+<span style="display:inline-block;margin-top:34px;font:700 28px var(--slab);color:#fff;background:var(--navy);padding:14px 28px;border-radius:12px;align-self:flex-start">¿Preguntas?</span></div></section>
+
+<div class="topline"></div>
+<header><img src="assets/logo_uis_bn.png" alt="Universidad Industrial de Santander"><span class="sep"></span><span id="part"></span><span id="speaker"></span></header>
+<footer><div id="source"></div><div id="progress" aria-label="Progreso"></div><div id="counter" aria-live="polite"></div></footer>
+<aside id="notes" hidden aria-label="Guion"><div id="notesHead"><strong id="noteSpeaker"></strong><span id="noteTime"></span><time id="clock">00:00</time></div><p id="noteText"></p><div id="nextSpeaker"></div></aside><button id="notesButton" aria-controls="notes" aria-expanded="false">Notas</button>
+<div id="start"><img src="assets/logo_uis_bn.png" alt="UIS"><h1 class="h1">Refractarios de MgO dopados con TiO<sub>2</sub></h1><p class="lead">Materiales refractarios · seminario de artículo</p><div style="margin-top:22px"><button id="begin">Iniciar</button><button id="beginFull">Iniciar en pantalla completa</button></div><p class="small">→ avanzar · ← volver · N guion · R reiniciar reloj · F pantalla completa</p></div>
+</main><div id="rotate">Gira el teléfono para ver la presentación en horizontal.</div>
+<script>
+'use strict';
+const notes=[
+"Buenas tardes. Vamos a presentar el artículo de Song y colaboradores, publicado en 2025 en el Journal of Materials Research and Technology: refractarios de MgO dopados con dióxido de titanio, para fundir superaleaciones de níquel de alta pureza.",
+"Empiezo con la introducción y la motivación del trabajo.",
+"Las superaleaciones de níquel se usan en turbinas de avión, en energía nuclear y en ingeniería avanzada, porque deben conservar sus propiedades a alta temperatura. Su desempeño depende mucho de la limpieza del lingote: impurezas traza e inclusiones de óxido las debilitan. Se funden por inducción al vacío, y ahí el crisol tiene que resistir el choque térmico y la corrosión para no contaminar la colada.",
+"El MgO es el refractario más usado para esto: funde a 2800 grados, es estable y la materia prima es abundante. Pero tiene tres problemas. Es difícil de sinterizar, así que la matriz queda porosa. Resiste mal el choque térmico y falla antes de tiempo. Y reacciona con los elementos activos del baño, que le pasan trazas dañinas a la aleación.",
+"La propuesta del artículo es dopar el MgO con dióxido de titanio en forma de anatasa, que es barato y promueve la sinterización, y que además se expande menos que el rutilo. Los objetivos fueron fabricar crisoles con 0, 1, 3 y 5 por ciento de TiO2, mejorar su resistencia a la corrosión y al choque térmico, estudiar sus fases y propiedades, y probarlos fundiendo una superaleación real. Kevin explica cómo lo hicieron.",
+"Gracias, Georman. Paso a la metodología y al diseño experimental.",
+"Partieron de MgO electrofundido, con un poco de CaO y SiO2 como impurezas, y de anatasa de más de 98,5 por ciento. Hicieron cuatro mezclas con la misma granulometría, 40, 40 y 20 por ciento, y solo cambiaron el TiO2: 0, 1, 3 y 5 por ciento. Las llamaron MT0, MT1, MT3 y MT5. Antes de fabricarlas calcularon con FactSage qué fases de enlace se forman según la relación entre CaO, TiO2 y SiO2.",
+"El proceso tiene cuatro pasos: mezclar con 1,5 por ciento de agua, prensar isostáticamente en frío a 240 megapascales durante dos minutos, cocer a 1680 grados durante 12 horas y, por último, fundir 1,8 kilogramos de la superaleación K417G en un horno de inducción al vacío, a 1570 grados y menos de 1 pascal.",
+"Al material del crisol le midieron las fases por difracción de rayos X, la microestructura por microscopía electrónica con EDS, la porosidad, la resistencia en frío y en caliente, y el choque térmico: 950 grados por 30 minutos y enfriamiento con aire. A la aleación le midieron oxígeno, nitrógeno, hidrógeno y magnesio. Ojo con el 5,5 por ciento de aluminio de la K417G: es el elemento que ataca al crisol. Sebastián sigue con la mineralogía.",
+"Gracias, Kevin. Ahora la evolución mineralógica y la microestructura.",
+"Sin TiO2, la fase que une los granos es el silicato dicálcico. Con 1 por ciento aparecen perovskita y monticelita; esta última funde a solo 1490 grados. Con 3 y 5 por ciento la monticelita desaparece y se forman forsterita y qandilita, y con 5 por ciento la qandilita aumenta. En resumen, el TiO2 convierte los silicatos de calcio en titanatos refractarios, siguiendo estas tres reacciones.",
+"Además, el TiO2 ayuda a densificar. El eutéctico MgO–TiO2 está a 1620 grados y la cocción fue a 1680, así que se forma una fase líquida que, según FactSage, llega a 10,5 por ciento. Ese líquido mueve masa y reacomoda los granos: el TiO2 actúa como agente de sinterización.",
+"Esto se ve en la interfaz entre el agregado y la matriz. En MT0 la interfaz es clara; en MT3 se vuelve difusa, lo que indica una unión más fuerte. Pero en MT5 aparece una separación alrededor del agregado, por la contracción de la matriz al sinterizar. Fabián les cuenta qué le pasa a las propiedades.",
+"Gracias, Sebastián. Sigo con las propiedades físicas, mecánicas y el choque térmico.",
+"Con TiO2, la porosidad abierta baja de 12,6 a 9,76 por ciento, mientras la total casi no cambia: los poros abiertos se convierten en cerrados. La densidad aparente sube de 3,12 a 3,18 gramos por centímetro cúbico, porque el TiO2 es más denso que el MgO; la relativa se mantiene en 87,1 por ciento.",
+"En resistencia, el dato clave es el choque térmico: MT5 pierde 34 por ciento de su resistencia, frente a 56 de MT1 y 53 de MT3. En caliente, a 1400 grados, el 1 por ciento es el peor caso, porque la monticelita funde a 1490 grados; luego la resistencia se recupera hasta 7,5 megapascales con 5 por ciento. En frío, el máximo está cerca de 27,3 megapascales con 3 por ciento.",
+"¿Por qué MT5 resiste mejor el choque térmico? La qandilita se expande menos que el MgO: 13,5 frente a 17,5 por 10 a la menos 6. Esa diferencia genera microgrietas que liberan tensiones, y además baja la expansión del conjunto. El orden queda MT5, MT0, MT3 y MT1, y tras fundir la aleación solo MT5 conservó su integridad. Deivis explica la corrosión.",
+"Gracias, Fabián. Ahora la corrosión del crisol y su efecto sobre la aleación.",
+"En el crisol de MgO puro, el aluminio de la aleación reduce el MgO: se forma alúmina y el magnesio pasa al metal. La alúmina reacciona con el MgO y forma espinela, y el aluminio que se infiltra por los poros ataca el silicato dicálcico y forma aluminatos de calcio. El resultado es una capa de reacción de 360 micrómetros, y la agitación del horno arrastra esas fases como inclusiones.",
+"Con TiO2, la capa de reacción baja de 230 a entre 58 y 81 micrómetros, porque la matriz densa frena la infiltración del aluminio. En MT5 la capa tiene cuatro zonas: espinela junto al metal, luego geikielita, luego qandilita con MgO, y al fondo la matriz.",
+"¿Y la aleación? Las impurezas totales bajan de 0,0021 a 0,0007 por ciento. El magnesio residual baja de 0,0015 a 0,0002 por ciento, y el oxígeno mínimo, 0,0004, se logra con MT3. Por estabilidad, el crisol con TiO2 supera a la espinela y esta al MgO. Gabriel cierra con la discusión termodinámica.",
+"Gracias, Deivis. Hasta ahora vimos qué pasa. Ahora quiero mostrar por qué pasa, con la termodinámica, y cerrar con las conclusiones.",
+"Primera pregunta: ¿por qué el TiO2 cambia las fases? Porque todas sus reacciones con las fases de enlace tienen energía libre de Gibbs negativa en todo el intervalo, hasta 1700 grados. La más favorable es la que consume el Ca3MgSi2O8, con cerca de menos 137 kilojulios. Es decir, el TiO2 no se queda inerte: consume los silicatos. Y eso importa por los puntos de fusión: la monticelita funde a 1490 grados, por debajo de los 1570 de la fusión, mientras que los titanatos y la forsterita funden por encima de 1760.",
+"Segunda pregunta: ¿qué pasa cuando llega el aluminio? A baja temperatura casi ninguna de sus reacciones es espontánea, pero a 1570 grados todas lo son; con la perovskita lo sería siempre, pero la matriz densa no deja que el aluminio llegue a ella. La alúmina es más selectiva: frente a los silicatos y la perovskita la energía es positiva, así que no reacciona. Solo ataca al MgO, formando espinela, y a la qandilita, formando espinela y geikielita. Eso explica las zonas que vio Deivis en MT5, y muestra el límite del método: demasiado TiO2 forma qandilita y vuelve a abrir la puerta a la espinela.",
+"¿Por qué resiste entonces? Por tres razones. Primero, la matriz densa: menos poros, menos infiltración y menos área de contacto. Segundo, la solución sólida: el titanio cuatro más, de 64 picómetros, sustituye al magnesio dos más, de 78, y crea vacancias catiónicas. Tercero, la fuerte afinidad del titanio por el oxígeno estabiliza el MgO. Para la aleación, eso significa menos inclusiones propias y ajenas, y menos contaminación del horno.",
+"¿Por qué TiO2 y no otro óxido? El lantano y el itrio transforman la monticelita, y el circonio sirve solo cuando la relación cal–sílice es menor que 2. La alúmina y el cerio actúan por solución sólida. El TiO2 es barato, forma fases de alto punto de fusión y además sinteriza con fase líquida. Por eso resuelve los tres problemas con un solo aditivo, con un óptimo entre 3 y 5 por ciento.",
+"Conclusiones en números: la porosidad abierta baja de 12,62 a 9,76 por ciento; MT5 pierde 34 por ciento de resistencia por choque térmico, contra 56 de MT1; la capa de reacción baja a 58–81 micrómetros, contra 360 en MgO; y las impurezas de la aleación caen a la tercera parte, de 0,0021 a 0,0007 por ciento. El crisol de MgO con TiO2 es una alternativa prometedora para fundir superaleaciones de alta pureza.",
+"Para cerrar, una lectura crítica. Los mismos autores dicen que la interacción con la qandilita y la perovskita requiere más estudio. El 5 por ciento es un compromiso: gana en choque térmico pero pierde resistencia en frío. Y la base experimental es limitada: una sola aleación, el HMOR con dos probetas y los datos del MgO puro tomados de un trabajo previo. El paso natural sería probar varias coladas y aleaciones más agresivas.",
+"Un dopante barato para un crisol más limpio. Muchas gracias. Quedamos atentos a sus preguntas."];
+const parts=Array.from(document.querySelectorAll('.slide')).map(s=>s.dataset.part);
+const colors={'Georman Quintero':'#0B3A63','Kevin Ruedas':'#1D5486','Sebastián Pereira':'#6B4FA8','Fabián Rivera':'#A86B12','Deivis Jiménez':'#B83A2A','Gabriel Franco':'#2B7336'};
+const $=id=>document.getElementById(id),slides=[...document.querySelectorAll('.slide')],N=slides.length,staticMode=new URLSearchParams(location.search).has('static');
+const speakers=slides.map(s=>s.dataset.speaker);
+let current=Math.min(N-1,Math.max(0,(parseInt(location.hash.slice(1),10)||1)-1)),fragment=0,started=staticMode,clockStart=null,mouseTimer,touchX=null;
+if(staticMode){document.documentElement.classList.add('static');$('start').hidden=true;}
+if(new URLSearchParams(location.search).has('autostart')){started=true;$('start').hidden=true;}
+function resize(){document.documentElement.style.setProperty('--scale',Math.min(innerWidth/1600,innerHeight/900));}addEventListener('resize',resize);resize();
+const segments=slides.map(()=>{const el=document.createElement('i');$('progress').append(el);return el;});
+function groups(){return [...new Set([...slides[current].querySelectorAll('[data-f]')].map(e=>Number(e.dataset.f)))].sort((a,b)=>a-b);}
+function updateFragments(){const g=groups();slides[current].querySelectorAll('[data-f]').forEach(e=>e.classList.toggle('shown',staticMode||g.indexOf(Number(e.dataset.f))<fragment));}
+function show(index,back=false){slides.forEach((s,i)=>{s.classList.toggle('active',i===index);s.setAttribute('aria-hidden',String(i!==index));});current=index;fragment=back||staticMode?groups().length:0;updateFragments();const sp=speakers[current],isSec=slides[current].classList.contains('sec');document.documentElement.style.setProperty('--speaker',isSec?'#9FD3A8':colors[sp]);$('speaker').textContent=sp;$('part').textContent=isSec?'':parts[current];$('part').style.color=isSec?'#C9D7E5':'';$('counter').textContent=String(current+1).padStart(2,'0')+' / '+N;$('counter').style.color=isSec?'#fff':'';$('source').textContent=slides[current].dataset.src;$('source').style.color=isSec?'#9FB3C8':'';document.querySelector('header img').style.filter=isSec?'invert(1)':'';$('noteSpeaker').textContent=sp;$('noteTime').textContent=parts[current];$('noteText').textContent=notes[current]||'';$('nextSpeaker').textContent=current<N-1&&speakers[current+1]!==sp?'Sigue: '+speakers[current+1]:'';segments.forEach((s,i)=>{s.classList.toggle('past',i<current);s.classList.toggle('current',i===current);});history.replaceState(null,'','#'+(current+1));}
+function next(){if(!started){begin(false);return;}if(clockStart===null)clockStart=performance.now();if(fragment<groups().length){fragment++;updateFragments();}else if(current<N-1)show(current+1);}
+function prev(){if(!started)return;if(fragment>0){fragment--;updateFragments();}else if(current>0)show(current-1,true);}
+async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch(e){}}
+function begin(full){started=true;$('start').hidden=true;if(full)fullscreen();}
+function setNotes(on){$('notes').hidden=!on;$('notesButton').setAttribute('aria-expanded',String(on));if(!staticMode)try{localStorage.setItem('mgo-notes',String(on));}catch(e){}}
+if(!staticMode)try{setNotes(localStorage.getItem('mgo-notes')==='true');}catch(e){}
+$('notesButton').onclick=()=>setNotes($('notes').hidden);$('begin').onclick=()=>begin(false);$('beginFull').onclick=()=>begin(true);
+document.addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey)return;const k=e.key.toLowerCase();if(['arrowright',' ','pagedown','arrowleft','pageup','home','end','n','r','p','f'].includes(k))e.preventDefault();if(['arrowright',' ','pagedown'].includes(k))next();else if(['arrowleft','pageup'].includes(k))prev();else if(k==='home'){begin(false);show(0);}else if(k==='end'){begin(false);show(N-1,true);}else if(k==='n')setNotes($('notes').hidden);else if(k==='r'){clockStart=clockStart===null?null:performance.now();$('clock').textContent='00:00';}else if(k==='f'||k==='p')fullscreen();});
+const interactive=e=>e.target.closest('button,a,#notes,#start');$('stage').addEventListener('click',e=>{if(!interactive(e))prev();});$('stage').addEventListener('contextmenu',e=>{if(!interactive(e)){e.preventDefault();next();}});
+document.addEventListener('mousemove',()=>{document.body.classList.add('mouse');clearTimeout(mouseTimer);mouseTimer=setTimeout(()=>document.body.classList.remove('mouse'),1700);});
+$('stage').addEventListener('touchstart',e=>{if(!interactive(e))touchX=e.changedTouches[0].clientX;},{passive:true});$('stage').addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>40){if(e.cancelable)e.preventDefault();dx<0?next():prev();}},{passive:false});
+setInterval(()=>{if(clockStart===null)return;const s=Math.floor((performance.now()-clockStart)/1000);$('clock').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');},250);
+addEventListener('hashchange',()=>show(Math.min(N-1,Math.max(0,(parseInt(location.hash.slice(1),10)||1)-1))));
+if(notes.length!==N)console.warn('notas',notes.length,'diapositivas',N);
+show(current);
+</script>
+</body>
+</html>
